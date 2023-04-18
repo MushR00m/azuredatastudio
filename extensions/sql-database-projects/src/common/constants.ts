@@ -618,6 +618,8 @@ export function differentDbDifferentServerExampleUsage(server: string, db: strin
 
 //#region Target platforms
 export const targetPlatformToVersion: Map<string, string> = new Map<string, string>([
+	[SqlTargetPlatform.sqlServer2005, '90'],
+	[SqlTargetPlatform.sqlServer2008, '100'],
 	[SqlTargetPlatform.sqlServer2012, '110'],
 	[SqlTargetPlatform.sqlServer2014, '120'],
 	[SqlTargetPlatform.sqlServer2016, '130'],
@@ -629,6 +631,8 @@ export const targetPlatformToVersion: Map<string, string> = new Map<string, stri
 ]);
 
 export const onPremServerVersionToTargetPlatform: Map<number, SqlTargetPlatform> = new Map<number, SqlTargetPlatform>([
+	[9,  SqlTargetPlatform.sqlServer2005],
+	[10, SqlTargetPlatform.sqlServer2008],
 	[11, SqlTargetPlatform.sqlServer2012],
 	[12, SqlTargetPlatform.sqlServer2014],
 	[13, SqlTargetPlatform.sqlServer2016],
